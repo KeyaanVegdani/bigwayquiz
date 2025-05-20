@@ -177,10 +177,10 @@ const questions = [
       // Set question number and update assets
       document.getElementById('number').textContent = `${index + 1}/12`;
       document.getElementById('number').style.color = color.secondary;
-      document.getElementById('background-img').src = 'assets/questions/' + image.background;
-      document.getElementById('squiggle-right').src = 'assets/questions/' + image.squiggleRight + '.svg';
-      document.getElementById('squiggle-left').src = 'assets/questions/' + image.squiggleLeft + '.svg';
-      document.getElementById('bottom').src = 'assets/questions/' + image.bottom;
+      document.getElementById('background-img').src = './assets/questions/' + image.background;
+      document.getElementById('squiggle-right').src = './assets/questions/' + image.squiggleRight + '.svg';
+      document.getElementById('squiggle-left').src = './assets/questions/' + image.squiggleLeft + '.svg';
+      document.getElementById('bottom').src = './assets/questions/' + image.bottom;
   
       document.getElementById('backBtn').style.display = index > 0 ? 'inline-block' : 'none';
       document.getElementById('homeBtn').style.display = index > 0 ? 'none' : 'inline-block';
