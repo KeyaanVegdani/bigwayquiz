@@ -19,28 +19,28 @@ const questions = [
     ["A boat with just you and the captain.", "A cruise ship with lots of travellers to chat with."],
     ["Hide and observe the monster to strategize against it.", "Charge at the monster, hoping to catch it off guard."],
     ["Ask a townsperson for help.", "Try and figure it out on your own."],
-    ["A reliable dune buggy that will take you directly to your destination.", "A friendly camel who’s known to embark on exciting side quests."],
+    ["A buggy that will take you directly to your destination.", "A friendly camel who’s known to embark on side quests."],
     ["Take shelter so I can continue on my path once it’s clear.", "Outrun the landslide!"],
-    ["Take in the beautiful view and enjoy your surroundings.", "Think of all the fun activities you can do the next time you visit!"],
+    ["Take in the beautiful view and enjoy your surroundings.", "Think of all the fun activities you can do the next time!"],
     ["Entice the dragon with a big plate of fresh hotpot meat.", "Yell loudly with the hope it wakes up."],
-    ["Try to reason with the dragon, using logic to ask for the broth recipe.", "Use your charisma to connect with the dragon, hoping it will find you trustworthy."],
-    ["I am a down to earth person who’s practical and pragmatic. I like to live in the moment and value simplicity.", "I am an imaginative person who’s always peering into the past and future. I am creative and curious, always thinking outside the box."],
+    ["Try to reason with the dragon to ask for the broth recipe.", "Use your charisma to connect with the dragon gaining trust."],
+    ["I am a down to earth person who’s practical and pragmatic.", "I am an imaginative person who’s always peering in time."],
     ["Love, of course!", "Salt, it enhances all the other flavours."]
   ];
 
   const colors = [
     { background: "#1D331A", button: "#0A2407", text: "#FFF4E6", secondary: "#407813"}, // Q1
-    { background: "#0A2407", button: "#0A2407", text: "#FFF4E6", secondary: "#407813"}, // Q2
-    { background: "#f5f5dc", button: "#556b2f", text: "#FFF4E6", secondary: "#65B128" }, // Q3
-    { background: "#ffe4e1", button: "#cd5c5c", text: "#FFF4E6", secondary: "#65B128" }, // Q4
-    { background: "#e6e6fa", button: "#6a5acd", text: "#FFF4E6", secondary: "#65B128" }, // Q5
-    { background: "#f0fff0", button: "#228b22", text: "#FFF4E6", secondary: "#65B128" }, // Q6
-    { background: "#fffacd", button: "#ff8c00", text: "#FFF4E6", secondary: "#65B128" }, // Q7
-    { background: "#dcdcdc", button: "#808080", text: "#FFF4E6", secondary: "#65B128" }, // Q8
-    { background: "#faf0e6", button: "#b22222", text: "#FFF4E6", secondary: "#65B128" }, // Q9
-    { background: "#e0ffff", button: "#20b2aa", text: "#FFF4E6", secondary: "#65B128" }, // Q10
-    { background: "#ffe4b5", button: "#8b4513", text: "#FFF4E6", secondary: "#65B128" }, // Q11
-    { background: "#fdf5e6", button: "#d2691e", text: "#FFF4E6", secondary: "#65B128" },  // Q12
+    { background: "#091E18", button: "#091E18", text: "#FFF4E6", secondary: "#648660"}, // Q2
+    { background: "#A22E0B", button: "#A22E0B", text: "#FFF4E6", secondary: "#FB701F" }, // Q3
+    { background: "#A22E0B", button: "#A22E0B", text: "#FFF4E6", secondary: "#FB701F" }, // Q4
+    { background: "#5F2525", button: "#5F2525", text: "#FFF4E6", secondary: "#FF999B" }, // Q5
+    { background: "#3D3D24", button: "#3D3D24", text: "#FFF4E6", secondary: "#BACAA4" }, // Q6
+    { background: "#451D12", button: "#451D12", text: "#FFF4E6", secondary: "#FF999B" }, // Q7
+    { background: "#3D3024", button: "#3D3024", text: "#FFF4E6", secondary: "#A68171" }, // Q8
+    { background: "#280505", button: "#280505", text: "#FFF4E6", secondary: "#8F1102" }, // Q9
+    { background: "#280505", button: "#280505", text: "#FFF4E6", secondary: "#8F1102" }, // Q10
+    { background: "#280505", button: "#280505", text: "#FFF4E6", secondary: "#8F1102" }, // Q11
+    { background: "#280505", button: "#280505", text: "#FFF4E6", secondary: "#8F1102" },  // Q12
     { background: "#000000", button: "#333333", text: "#FFF4E6", secondary: "#65B128" } // Final result page
   ];
 
@@ -59,6 +59,26 @@ const questions = [
     { background: "background12.svg", foreground: "foreground12.webp", squiggleRight: "squiggle12-right", squiggleLeft: "squiggle12-left", bottom: "bottom12.svg"},
     { background: "background13.svg", foreground: "foreground13.webp", squiggleRight: "squiggle13-right", squiggleLeft: "squiggle13-left", bottom: "bottom13.svg"},
   ]
+
+  const resultColors = {
+    "ENFP": { background: "#852948", button: "#660A46", text: "#FFF4E6", secondary: "#FF8B8B" },
+    "INFJ": { background: "#BE4A51", button: "#992A32", text: "#FFF4E6", secondary: "#004D40" },
+    "ISTP": { background: "#6C407C", button: "#41234B", text: "#FFF4E6", secondary: "#1565C0" },
+    "INTJ": { background: "#35547E", button: "#193D6D", text: "#FFF4E6", secondary: "#455A64" },
+    "ENTP": { background: "#246B69", button: "#154746", text: "#FFF4E6", secondary: "#EF6C00" },
+    "ISFP": { background: "#49448F", button: "#35316C", text: "#FFF4E6", secondary: "#689F38" },
+    "ESFJ": { background: "#AC4A0D", button: "#932A00", text: "#FFF4E6", secondary: "#D81B60" },
+    "ISTJ": { background: "#AC4A0D", button: "#932A00", text: "#FFF4E6", secondary: "#546E7A" },
+    "ENFJ": { background: "#3A4F3B", button: "#293829", text: "#FFF4E6", secondary: "#8E24AA" },
+    "INTP": { background: "#AC4A0D", button: "#932A00", text: "#FFF4E6", secondary: "#512DA8" },
+    "ESTJ": { background: "#AC4A0D", button: "#932A00", text: "#FFF4E6", secondary: "#F57F17" },
+    "INFP": { background: "#7E3D3D", button: "#5F2C2C", text: "#FFF4E6", secondary: "#7CB342" },
+    "ESFP": { background: "#1F6626", button: "#063B2E", text: "#FFF4E6", secondary: "#FBC02D" },
+    "ISFJ": { background: "#D5822F", button: "#A95213", text: "#FFF4E6", secondary: "#1976D2" },
+    "ESTP": { background: "#AC4A0D", button: "#932A00", text: "#FFF4E6", secondary: "#C62828" },
+    "ENTJ": { background: "#841C1E", button: "#690C0D", text: "#FFF4E6", secondary: "#D84315" }
+  };
+  
   
 
   const optionScores = [
@@ -67,18 +87,18 @@ const questions = [
   ];
 
   const resultImages = {
-    "ENFP": "/public_html/assets/questions/ENFP.png",
-    "ENFJ": "/public_html/assets/questions/ENFJ.png",
-    "ENTP": "/public_html/assets/questions/ENTP.png",
-    "ENTJ": "/public_html/assets/questions/ENTJ.png",
-    "ESFP": "/public_html/assets/questions/ESFP.png",
-    "ESTP": "/public_html/assets/questions/ESTP.png",
-    "INFP": "/public_html/assets/questions/INFP.png",
-    "INFJ": "/public_html/assets/questions/INFJ.png",
-    "INTJ": "/public_html/assets/questions/INTJ.png",
-    "ISFP": "/public_html/assets/questions/ISFP.png",
-    "ISFJ": "/public_html/assets/questions/ISFJ.png",
-    "ISTP": "/public_html/assets/questions/ISTP.png"
+    "ENFP": "./assets/questions/ENFP.png",
+    "ENFJ": "./assets/questions/ENFJ.png",
+    "ENTP": "./assets/questions/ENTP.png",
+    "ENTJ": "./assets/questions/ENTJ.png",
+    "ESFP": "./assets/questions/ESFP.png",
+    "ESTP": "./assets/questions/ESTP.png",
+    "INFP": "./assets/questions/INFP.png",
+    "INFJ": "./assets/questions/INFJ.png",
+    "INTJ": "./assets/questions/INTJ.png",
+    "ISFP": "./assets/questions/ISFP.png",
+    "ISFJ": "./assets/questions/ISFJ.png",
+    "ISTP": "./assets/questions/ISTP.png"
   };
   
   
@@ -93,11 +113,22 @@ const questions = [
   let answers = new Array(questions.length).fill(null); // Stores selected option index (0 or 1)
 
   function loadQuestion(index) {
-    const color = colors[index];
-    const image = questionImages[index];
     const docBod = document.body;
   
-    // Start fade out
+    // If we're at results, skip fade and go straight to result screen
+    if (index >= questions.length) {
+      docBod.classList.remove('fade-out');
+      docBod.classList.remove('fade-in');
+      showResults();
+      return;
+    }
+  
+    // Proceed with normal fade transition
+    const color = colors[index];
+    const image = questionImages[index];
+
+    document.getElementById('endBtn').style.display = 'none';
+  
     docBod.classList.remove('fade-in');
     docBod.classList.add('fade-out');
   
@@ -106,15 +137,10 @@ const questions = [
       document.body.style.backgroundColor = color.background;
       document.body.style.color = color.text;
   
-      // Back/Home button styling
       const backBtn = document.getElementById('backBtn');
       document.getElementById('backArrow').style.stroke = color.secondary;
       document.getElementById('homeArrow').style.stroke = color.secondary;
-  
-      if (index >= questions.length) {
-        showResults();
-        return;
-      }
+
   
       // Question content
       document.getElementById('questionText').textContent = `${questions[index]}`;
@@ -124,8 +150,6 @@ const questions = [
       options[index].forEach((text, optIdx) => {
         const button = document.createElement('button');
         button.textContent = text;
-  
-        // Button styling
         button.style.backgroundColor = color.button;
         button.style.color = color.text;
         button.style.border = "none";
@@ -147,9 +171,10 @@ const questions = [
         };
   
         answersDiv.appendChild(button);
+        createFireflies();
       });
   
-      // Question number and squiggles
+      // Set question number and update assets
       document.getElementById('number').textContent = `${index + 1}/12`;
       document.getElementById('number').style.color = color.secondary;
       document.getElementById('background-img').src = 'assets/questions/' + image.background;
@@ -157,20 +182,20 @@ const questions = [
       document.getElementById('squiggle-left').src = 'assets/questions/' + image.squiggleLeft + '.svg';
       document.getElementById('bottom').src = 'assets/questions/' + image.bottom;
   
-      // Show/hide navigation buttons
       document.getElementById('backBtn').style.display = index > 0 ? 'inline-block' : 'none';
       document.getElementById('homeBtn').style.display = index > 0 ? 'none' : 'inline-block';
   
-      // Trigger fade-in
+      // Trigger fade-in for updated content
       docBod.classList.remove('fade-out');
       docBod.classList.add('fade-in');
   
-      // Optional: remove fade-in after transition to keep class list clean
+      // Remove fade-in class after animation
       setTimeout(() => {
         docBod.classList.remove('fade-in');
       }, 400);
-    }, 400); // Match with CSS transition duration
+    }, 400);
   }
+  
   
 
   function incrementLetter(letter) {
@@ -219,13 +244,60 @@ const questions = [
       (T >= F ? "T" : "F") +
       (J >= P ? "J" : "P");
   
-    const imageSrc = resultImages[finalResult] || "/public_html/assets/questions/default.png"; // fallback if needed
+    const imageSrc = resultImages[finalResult] || "./assets/questions/default.png";
+    const theme = resultColors[finalResult] || { background: "#000", button: "#333", text: "#FFF", secondary: "#65B128" };
+    const finalImage = questionImages[questionImages.length - 1];
+  
+    // Apply dynamic result theme
+    document.body.style.backgroundColor = theme.background;
+    document.body.style.color = theme.text;
+    document.getElementById('bottom-bar').style.backgroundColor = theme.button;
+  
+    // Update visuals
+    document.getElementById('background-img').style.display = 'none';
+    document.getElementById('squiggle-right').style.display = 'none';
+    document.getElementById('squiggle-left').style.display = 'none';
+    document.getElementById('bottom').style.display = 'none';
+  
+    document.getElementById('backBtn').style.display = 'none';
+    document.getElementById('homeBtn').style.display = 'none';
+    document.getElementById('number').style.display = 'none';
+
+    document.getElementById('endBtn').style.display = 'block';
+    document.getElementById('endBtn').style.backgroundColor = theme.button;
+    document.getElementById('endBtn').style.color = theme.text;
   
     document.getElementById('questionContainer').innerHTML = `
-      <h2>Quiz Completed!</h2>
-      <p><strong>Your Result:</strong> ${finalResult}</p>
       <img src="${imageSrc}" alt="${finalResult} Result Image" style="max-width: 100%; margin-top: 1rem;">
     `;
   }
+
+  function createFireflies(count = 20) {
+    const container = document.getElementById('fireflies');
+    container.innerHTML = ''; // Clear any existing fireflies
+  
+    for (let i = 0; i < count; i++) {
+      const fly = document.createElement('div');
+      fly.className = 'firefly';
+  
+      // Random position
+      fly.style.top = Math.random() * 100 + 'vh';
+      fly.style.left = Math.random() * 100 + 'vw';
+  
+      // Random movement
+      const x = (Math.random() - 0.5) * 200 + 'px';
+      const y = (Math.random() - 0.5) * 200 + 'px';
+      fly.style.setProperty('--x', x);
+      fly.style.setProperty('--y', y);
+  
+      // Random delay for animation staggering
+      fly.style.animationDelay = Math.random() * 5 + 's';
+  
+      container.appendChild(fly);
+    }
+  }
+  
+  
+  
 
   window.onload = () => loadQuestion(currentQuestionIndex);

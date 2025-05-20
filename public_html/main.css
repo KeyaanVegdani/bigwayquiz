@@ -1,0 +1,167 @@
+@font-face{
+    font-family: 'futura-bk-bt-book';
+    src: url('fonts/futura-bk-bt-book.ttf');
+  }
+
+@font-face{
+    font-family: 'futura-xblk-bt';
+    src: url('fonts/futura-xblk-bt.ttf');
+  }
+@font-face {
+    font-family: 'PalmerLakePrint-Regular';
+    src: url('fonts/PalmerLakePrint-Regular.otf');
+}
+
+body{
+    background-color: #80141B;
+}
+
+.main-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25rem;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    z-index: 3;
+}
+
+h1{
+    font-family: PalmerLakePrint-Regular, sans-serif;
+    color: #F8CB77;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    margin-bottom: -0.7rem;
+    transform: rotate(-12deg);
+}
+
+h2{
+    color: #FFF4E6;
+    text-align: center;
+    font-family: futura-xblk-bt, sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+p{
+    color: #FFF4E6;
+    text-align: center;
+    font-family: futura-bk-bt-book, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 16rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0rem;
+}
+
+.titles{
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+.button{
+    display: block;
+    text-decoration: none;
+    color: #F3ECE4;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: futura-bk-bt-book, sans-serif;
+    display: flex;
+    height: 2.3125rem;
+    padding: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 8rem;
+    background-color: #9F2932;
+    border-radius: 0.63rem;
+    margin-bottom: 1rem;
+}
+
+.button-div{
+    max-width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.primary{
+    background-color: #5A0D11;
+}
+
+.button:hover{
+    background-color: #F3ECE4;
+    color: #5A0D11;
+    transform: scale(1.02);
+    transition: all 0.1s ease;
+}
+
+.pot{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%);
+    z-index: -1;
+    max-width: 150%;
+}
+.bottom-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 150%;
+    z-index: -2;
+}
+.bottom-left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 150%;
+    z-index: -3;
+}
+
+.top-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 150%;
+    z-index: -3;
+}
+.top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 150%;
+    z-index: -2;
+}
+
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    height: 2rem;
+    width: 100%;
+    left: 0;
+    z-index: 3;
+    background-color: #5A0D11;
+}
+
+.bigway-logo{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
