@@ -133,13 +133,13 @@ body {
     position: absolute;
     right: 0;
     bottom: 1rem;
-    z-index: -2;
+    z-index: -1;
 }
 #squiggle-left{
     position: absolute;
     left: 0;
     bottom: 1rem;
-    z-index: -2;
+    z-index: -1;
 }
 
 #bottom{
