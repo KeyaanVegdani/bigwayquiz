@@ -7,13 +7,14 @@
     font-family: 'futura-xblk-bt';
     src: url('fonts/futura-xblk-bt.ttf');
   }
-
+html{
+  overflow-x: hidden;
+}
 body {
   margin: 40px;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
   background-color: #80141B;
-  overflow-x: hidden;
 }
 .fade-out {
     opacity: 0;
@@ -88,6 +89,7 @@ body {
     padding: 0.25rem;
     margin-top: 1rem;
     z-index: 3;
+    overflow-x: hidden;
 }
 
 #questionText{
@@ -193,6 +195,46 @@ body {
   @keyframes flicker {
     0%, 100% { opacity: 0.2; }
     50% { opacity: 1; }
+  }
+
+  @media (max-width: 30rem){
+
+    #answers button {
+      font-family: futura-bk-bt-book, sans-serif;
+      display: block;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      margin-bottom: 0.625rem;
+      width: 20rem;
+      font-size: 0.7rem;
+      cursor: pointer;
+      border-radius: 0.2rem;
+    }
+
+    #bottom{
+      position:absolute;
+      bottom: -2rem;
+      left: 50%;
+      right:50%;
+      transform: translate(-50%, 0%);
+      z-index: -1;
+  }
+
+  #background-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 120%;
+    transform: translate(-10%, 0%);
+    margin-top: 2rem;
+    z-index: -1;
+}
+
+
+
+
   }
   
 
