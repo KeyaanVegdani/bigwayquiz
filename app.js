@@ -29,7 +29,7 @@ const questions = [
   ];
 
   const colors = [
-    { background: "#1D331A", button: "#0A2407", text: "#FFF4E6", secondary: "#407813"}, // Q1
+    { background: "#04141C", button: "#04141C", text: "#FFF4E6", secondary: "#5888B6"}, // Q1
     { background: "#091E18", button: "#091E18", text: "#FFF4E6", secondary: "#648660"}, // Q2
     { background: "#A22E0B", button: "#A22E0B", text: "#FFF4E6", secondary: "#FB701F" }, // Q3
     { background: "#A22E0B", button: "#A22E0B", text: "#FFF4E6", secondary: "#FB701F" }, // Q4
